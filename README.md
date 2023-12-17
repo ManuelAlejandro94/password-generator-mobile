@@ -1,6 +1,6 @@
 # password_generator_mobile
 
-A new Flutter project.
+Project created in Flutter to get a password generated from an own API
 
 ## Getting Started
 
