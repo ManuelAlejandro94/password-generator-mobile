@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:password_generator_mobile/home_page.dart';
+import 'package:password_generator_mobile/pages/basic_page.dart';
+import 'package:password_generator_mobile/pages/menu_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black87
       ),
       title: 'Password generated',
-      home: HomePage(),
+      home: const MenuPage(),
     );
   }
 }
