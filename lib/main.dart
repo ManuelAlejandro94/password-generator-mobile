@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:password_generator_mobile/pages/basic_page.dart';
 import 'package:password_generator_mobile/pages/menu_page.dart';
 
 void main() {
@@ -13,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black87
       ),

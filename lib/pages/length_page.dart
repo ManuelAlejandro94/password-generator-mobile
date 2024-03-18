@@ -63,7 +63,8 @@ class _LengthPageState extends State<LengthPage> {
                 child: const Text(
                   "Generate password",
                   style: TextStyle(fontSize: 25),
-                ))
+                )
+              )
             ],
           ),
         ),

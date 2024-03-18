@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:password_generator_mobile/pages/basic_page.dart';
+import 'package:password_generator_mobile/pages/customize_page.dart';
 import 'package:password_generator_mobile/pages/length_page.dart';
 
 class MenuPage extends StatefulWidget {
@@ -56,6 +57,24 @@ class _MenuPageState extends State<MenuPage> {
                 },
                 child: const Text(
                   "Choose length",
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+              const SizedBox(height: 10,),
+              ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(const Color.fromARGB(179, 138, 90, 90)),
+                  foregroundColor: MaterialStateProperty.all(Colors.black),
+                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50)),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const CustomizePage())
+                  );
+                },
+                child: const Text(
+                  "Customize password",
                   style: TextStyle(fontSize: 24),
                 ),
               ),
