@@ -17,9 +17,6 @@ class _LengthPageState extends State<LengthPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Length password'),
-        backgroundColor: Color.fromARGB(179, 138, 90, 90),
-        foregroundColor: Colors.black,
-        centerTitle: true,
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -38,22 +35,12 @@ class _LengthPageState extends State<LengthPage> {
               TextField(
                 textAlign: TextAlign.center,
                 enabled: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  filled: true,
-                  fillColor: Colors.amber.shade50
-                ),
                 style: const TextStyle(fontSize: 22),
                 keyboardType: TextInputType.number,
                 controller: controller,
               ),
               const SizedBox(height: 10,),
               ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.red.shade900),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
-                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50))
-                ),
                 onPressed: () {
                   Navigator.push(
                     context,

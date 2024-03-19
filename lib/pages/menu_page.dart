@@ -16,8 +16,6 @@ class _MenuPageState extends State<MenuPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Select type of password'),
-        backgroundColor: Colors.grey.shade700,
-        centerTitle: true,
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -26,11 +24,6 @@ class _MenuPageState extends State<MenuPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.white70),
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50)),
-                ),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -44,11 +37,6 @@ class _MenuPageState extends State<MenuPage> {
               ),
               const SizedBox(height: 10,),
               ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(const Color.fromARGB(179, 138, 90, 90)),
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50)),
-                ),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -62,11 +50,6 @@ class _MenuPageState extends State<MenuPage> {
               ),
               const SizedBox(height: 10,),
               ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(const Color.fromARGB(179, 138, 90, 90)),
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50)),
-                ),
                 onPressed: () {
                   Navigator.push(
                     context,

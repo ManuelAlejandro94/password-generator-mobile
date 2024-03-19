@@ -48,12 +48,9 @@ class _PasswordCustomizedState extends State<PasswordCustomized> {
   }
   @override
   Widget build(BuildContext context) {
-    //TODO: Generate view of all element
     return Scaffold(
       appBar: AppBar(
         title: const Text('Password generated'),
-        backgroundColor: Colors.grey.shade700,
-        centerTitle: true,
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -65,7 +62,7 @@ class _PasswordCustomizedState extends State<PasswordCustomized> {
                 'Your password generated',
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.white
+                  color: Color.fromARGB(255, 192, 192, 192)
                 ),
               ),
               const SizedBox(height: 10,),
@@ -78,12 +75,10 @@ class _PasswordCustomizedState extends State<PasswordCustomized> {
                       textAlign: TextAlign.center,
                       controller: controller,
                       enabled: false,
-                      decoration: InputDecoration(
-                        border: const OutlineInputBorder(),
-                        filled: true,
-                        fillColor: Colors.amber.shade50
+                      style: const TextStyle(
+                        fontSize: 22,
+                        color: Color.fromARGB(255, 51, 51, 51)
                       ),
-                      style: const TextStyle(fontSize: 22),
                     );
                   }
                   else if (snapshot.hasError){
@@ -98,11 +93,6 @@ class _PasswordCustomizedState extends State<PasswordCustomized> {
               ),
               const SizedBox(height: 10,),
               ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.red.shade900),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
-                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50))
-                ),
                 onPressed: () {
                   setState(() {
                     _futurePassword = fetchPasswordGenerated(widget.params);
@@ -118,7 +108,6 @@ class _PasswordCustomizedState extends State<PasswordCustomized> {
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.white70),
                   foregroundColor: MaterialStateProperty.all(Colors.black),
-                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50))
                 ),
                 onPressed: () {
                   Clipboard.setData(ClipboardData(text: controller.text)).

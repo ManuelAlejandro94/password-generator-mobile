@@ -21,9 +21,6 @@ class _CustomizePageState extends State<CustomizePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Customize password'),
-        backgroundColor: Color.fromARGB(179, 138, 90, 90),
-        foregroundColor: Colors.black,
-        centerTitle: true,
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -42,27 +39,27 @@ class _CustomizePageState extends State<CustomizePage> {
               TextField(
                 textAlign: TextAlign.center,
                 enabled: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  filled: true,
-                  fillColor: Colors.amber.shade50,
-                  hintText: 'Length'
+                style: const TextStyle(
+                  fontSize: 22,
+                  color: Color.fromARGB(255, 51, 51, 51)
                 ),
-                style: const TextStyle(fontSize: 22),
                 keyboardType: TextInputType.number,
                 controller: controllerLength,
+                decoration: const InputDecoration(
+                  hintText: 'Length'
+                ),
               ),
               const SizedBox(height: 10,),
               TextField(
                 textAlign: TextAlign.center,
                 enabled: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  filled: true,
-                  fillColor: Colors.amber.shade50,
+                decoration: const InputDecoration(
                   hintText: 'Minimum number of letters'
                 ),
-                style: const TextStyle(fontSize: 22),
+                style: const TextStyle(
+                  fontSize: 22,
+                  color: Color.fromARGB(255, 51, 51, 51)
+                ),
                 keyboardType: TextInputType.number,
                 controller: controllerLetters,
               ),
@@ -70,13 +67,13 @@ class _CustomizePageState extends State<CustomizePage> {
               TextField(
                 textAlign: TextAlign.center,
                 enabled: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  filled: true,
-                  fillColor: Colors.amber.shade50,
-                  hintText: 'Number of digits'
+                decoration: const InputDecoration(
+                  hintText: 'Minimum number of digits'
                 ),
-                style: const TextStyle(fontSize: 22),
+                style: const TextStyle(
+                  fontSize: 22,
+                  color: Color.fromARGB(255, 51, 51, 51)
+                ),
                 keyboardType: TextInputType.number,
                 controller: controllerDigits,
               ),
@@ -84,23 +81,18 @@ class _CustomizePageState extends State<CustomizePage> {
               TextField(
                 textAlign: TextAlign.center,
                 enabled: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  filled: true,
-                  fillColor: Colors.amber.shade50,
-                  hintText: 'Number of special characters'
+                decoration: const InputDecoration(
+                  hintText: 'Minimum number of numbers'
                 ),
-                style: const TextStyle(fontSize: 22),
+                style: const TextStyle(
+                  fontSize: 22,
+                  color: Color.fromARGB(255, 51, 51, 51)
+                ),
                 keyboardType: TextInputType.number,
                 controller: controllerSpecial,
               ),
               const SizedBox(height: 10,),
               ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.red.shade900),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
-                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50))
-                ),
                 onPressed: () {
                   CustomizedBody params = CustomizedBody(
                     len: int.parse(controllerLength.text),

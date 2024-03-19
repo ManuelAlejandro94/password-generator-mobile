@@ -37,9 +37,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Basic password', style: TextStyle(color: Colors.black),),
-        backgroundColor: Colors.white70,
-        centerTitle: true,
+        title: const Text('Basic password'),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -51,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                 'Your password generated:',
                 style: TextStyle(
                   fontSize: 25,
-                  color: Colors.white
+                  color: Color.fromARGB(255, 192, 192, 192)
                 ),
               ),
               const SizedBox(height: 10,),
@@ -64,12 +62,10 @@ class _HomePageState extends State<HomePage> {
                       textAlign: TextAlign.center,
                       controller: controller,
                       enabled: false,
-                      decoration: InputDecoration(
-                        border: const OutlineInputBorder(),
-                        filled: true,
-                        fillColor: Colors.amber.shade50
-                      ),
-                      style: const TextStyle(fontSize: 22),
+                      style: const TextStyle(
+                        fontSize: 22,
+                        color: Color.fromARGB(255, 51, 51, 51)
+                        ),
                     );
                   }
                   else if(snapshot.hasError){
@@ -77,18 +73,16 @@ class _HomePageState extends State<HomePage> {
                   }
 
                   return const Text(
-                    'Your password generated',
-                    style: TextStyle(fontSize: 25),
+                    'Your password is generating',
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Color.fromARGB(255, 192, 192, 192)
+                    ),
                   );
                 },
               ),
               const SizedBox(height: 10,),
               ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor:MaterialStateProperty.all(Colors.red.shade900),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
-                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50)),
-                ),
                 onPressed: () {
                   setState(() {
                     _futurePassword = fetchPasswordGenerated();
@@ -104,7 +98,6 @@ class _HomePageState extends State<HomePage> {
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.white70),
                   foregroundColor: MaterialStateProperty.all(Colors.black),
-                  minimumSize: MaterialStateProperty.all(const Size.fromHeight(50)),
                 ),
                 onPressed:() {
                   Clipboard.setData(ClipboardData(text: controller.text)).
