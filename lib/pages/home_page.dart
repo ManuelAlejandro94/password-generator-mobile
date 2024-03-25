@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:password_generator_mobile/components/card_widget.dart';
 import 'package:password_generator_mobile/pages/basic_page.dart';
 import 'package:password_generator_mobile/pages/customize_page.dart';
+import 'package:password_generator_mobile/pages/exact_page.dart';
 import 'package:password_generator_mobile/pages/length_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -63,8 +64,13 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(width: 10,),
                 GestureDetector(
-                  onTap: () {},
-                  child: const CardWidget(title: 'Coming Soon'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ExactPage())
+                    );
+                  },
+                  child: const CardWidget(title: 'Exact password'),
                 ),
               ],
             ),
