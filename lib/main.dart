@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:password_generator_mobile/pages/menu_page.dart';
+import 'package:password_generator_mobile/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         )
       ),
       title: 'Password generated',
-      home: const MenuPage(),
+      home: const HomePage(),
     );
   }
 }

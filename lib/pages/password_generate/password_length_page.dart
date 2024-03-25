@@ -91,6 +91,7 @@ class _PasswordLengthGeneratedState extends State<PasswordLengthGenerated> {
                 child: const Text(
                   'Generate new password',
                   style: TextStyle(fontSize: 24),
+                  textAlign: TextAlign.center,
                 ),
               ),
               const SizedBox(height: 10,),

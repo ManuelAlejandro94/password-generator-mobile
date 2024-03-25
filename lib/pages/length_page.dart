@@ -28,7 +28,7 @@ class _LengthPageState extends State<LengthPage> {
                 'Length of you password',
                 style: TextStyle(
                   fontSize: 25,
-                  color: Colors.white
+                  color: Colors.white,
                 ),
               ),
               const SizedBox(height: 10,),
@@ -49,7 +49,10 @@ class _LengthPageState extends State<LengthPage> {
                 },
                 child: const Text(
                   "Generate password",
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(
+                    fontSize: 25,
+                  ),
+                  textAlign: TextAlign.center,
                 )
               )
             ],

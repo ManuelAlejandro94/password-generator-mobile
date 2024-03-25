@@ -108,6 +108,7 @@ class _CustomizePageState extends State<CustomizePage> {
                 child: const Text(
                   "Generate password",
                   style: TextStyle(fontSize: 25),
+                  textAlign: TextAlign.center,
                 )
               )
             ],

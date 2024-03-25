@@ -16,14 +16,14 @@ Future<Password> fetchPasswordGenerated() async {
 
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class BasicPage extends StatefulWidget {
+  const BasicPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<BasicPage> createState() => _BasicPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _BasicPageState extends State<BasicPage> {
   late Future<Password> _futurePassword;
   TextEditingController controller = TextEditingController();
 
@@ -91,6 +91,7 @@ class _HomePageState extends State<HomePage> {
                 child: const Text(
                   "Generate new password",
                   style: TextStyle(fontSize: 25),
+                  textAlign: TextAlign.center,
                 ),
               ),
               const SizedBox(height: 10,),

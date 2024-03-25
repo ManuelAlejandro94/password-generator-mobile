@@ -101,6 +101,7 @@ class _PasswordCustomizedState extends State<PasswordCustomized> {
                 child: const Text(
                   'Generate new password',
                   style: TextStyle(fontSize: 24),
+                  textAlign: TextAlign.center,
                 ),
               ),
               const SizedBox(height: 10,),
