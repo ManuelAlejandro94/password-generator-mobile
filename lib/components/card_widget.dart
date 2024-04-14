@@ -23,8 +23,16 @@ class _CardWidgetState extends State<CardWidget>{
         padding: const EdgeInsets.all(8.0),
         width: cardWidth,
         height: cardHeigth,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.blueGrey.withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: const Offset(0, 3)
+            )
+          ],
+          gradient: const LinearGradient(
             colors: [
               Color.fromARGB(255, 12, 12, 76),
               Color.fromARGB(255, 25, 25, 112),
