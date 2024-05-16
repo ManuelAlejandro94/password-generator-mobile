@@ -5,7 +5,7 @@ import '../classes/password_class.dart';
 import 'package:flutter/services.dart';
 
 Future<Password> fetchPasswordGenerated() async {
-  final response = await http.get(Uri.parse('https://password-generator-yjm5.onrender.com/generate-password'));
+  final response = await http.get(Uri.parse('https://jmhvrh49e8.execute-api.us-east-2.amazonaws.com/dev/generate-password'));
 
   if(response.statusCode == 200){
     return Password.fromJson(jsonDecode(response.body) as Map<String, dynamic>);

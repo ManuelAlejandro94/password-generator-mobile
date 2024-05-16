@@ -15,7 +15,7 @@ Future<GeneralResponse> fetchPasswordGenerated(CustomizedBody params) async {
   };
 
   final response = await http.post(
-    Uri.parse("https://password-generator-yjm5.onrender.com/generate-password-customize"),
+    Uri.parse("https://jmhvrh49e8.execute-api.us-east-2.amazonaws.com/dev/generate-password-customize"),
     headers: { HttpHeaders.contentTypeHeader: "application/json" }, 
     body: jsonEncode(body)
   );
