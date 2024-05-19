@@ -13,16 +13,19 @@ class _CardWidgetState extends State<CardWidget>{
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
-    final screenHeigth = MediaQuery.of(context).size.height;
-    final cardWidth = screenWidth * 0.4;
-    final cardHeigth = screenHeigth * 0.35;
-    double fontSize = screenWidth * 0.06;
+    final double screenHeigth = MediaQuery.of(context).size.height;
+    final double cardMaxWidth = screenWidth * 0.4;
+    //final double cardMaxHeigth = screenHeigth * 0.35;
+    final double cardMaxHeigth = screenHeigth * 0.20;
+    final double fontSize = screenWidth * 0.06;
 
     return Card(
       child: Container(
         padding: const EdgeInsets.all(8.0),
-        width: cardWidth,
-        height: cardHeigth,
+        constraints: BoxConstraints(
+          maxWidth: cardMaxWidth,
+          maxHeight: cardMaxHeigth
+        ),
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(

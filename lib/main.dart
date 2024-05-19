@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:password_generator_mobile/pages/home_page.dart';
+import 'package:password_generator_mobile/pages/basic_page.dart';
+import 'package:password_generator_mobile/pages/customize_page.dart';
+import 'package:password_generator_mobile/pages/exact_page.dart';
+import 'package:password_generator_mobile/pages/home_page_v3.dart';
+import 'package:password_generator_mobile/pages/length_page.dart';
+import 'package:password_generator_mobile/pages/password_generate/password_iphone_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +40,14 @@ class MyApp extends StatelessWidget {
         )
       ),
       title: 'Password generated',
-      home: const HomePage(),
+      home: const HomePageV3(),
+      routes: {
+        '/basic': (context) => const BasicPage(),
+        '/length':(context) => const LengthPage(),
+        '/custom':(context) => const CustomizePage(),
+        '/exact':(context) => const ExactPage(),
+        '/iphone':(context) => const PasswordIphone()
+      },
     );
   }
 }
