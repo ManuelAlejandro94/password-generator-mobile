@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:password_generator_mobile/classes/exact_class.dart';
 import 'package:password_generator_mobile/classes/general_class.dart';
 import 'package:http/http.dart' as http;
+import 'package:password_generator_mobile/components/loading_widget.dart';
 
 Future<GeneralResponse> fetchPasswordGenerated(ExactBody params) async {
   final body = {
@@ -85,10 +86,7 @@ class _PasswordExactState extends State<PasswordExact> {
                     return Text('${snapshot.error}');
                   }
 
-                  return const Text(
-                    'Loading password generated',
-                    style: TextStyle(fontSize: 24),
-                  );
+                  return const LoadingWidget();
                 }
               ),
               const SizedBox(height: 10,),

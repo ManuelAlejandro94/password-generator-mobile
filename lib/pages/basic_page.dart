@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:password_generator_mobile/components/loading_widget.dart';
 import '../classes/password_class.dart';
 import 'package:flutter/services.dart';
 
@@ -72,13 +73,7 @@ class _BasicPageState extends State<BasicPage> {
                     return Text('${snapshot.error}');
                   }
 
-                  return const Text(
-                    'Your password is generating',
-                    style: TextStyle(
-                      fontSize: 25,
-                      color: Color.fromARGB(255, 192, 192, 192)
-                    ),
-                  );
+                  return const LoadingWidget();
                 },
               ),
               const SizedBox(height: 10,),

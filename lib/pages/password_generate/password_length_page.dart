@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:password_generator_mobile/classes/password_class.dart';
 import 'package:http/http.dart' as http;
+import 'package:password_generator_mobile/components/loading_widget.dart';
 
 Future<Password> fetchPasswordGenerated(String len) async {
   final response = await http.get(Uri.parse('https://jmhvrh49e8.execute-api.us-east-2.amazonaws.com/dev/generate-password-length/$len'));
@@ -75,10 +76,7 @@ class _PasswordLengthGeneratedState extends State<PasswordLengthGenerated> {
                     return Text('${snapshot.error}');
                   }
 
-                  return const Text(
-                    'Your password generated',
-                    style: TextStyle(fontSize: 24),
-                  );
+                  return const LoadingWidget();
                 },
               ),
               const SizedBox(height: 10,),
